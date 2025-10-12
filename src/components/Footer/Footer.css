@@ -1,0 +1,106 @@
+.footer {
+  background: linear-gradient(135deg, #d4a574 0%, #8b7355 100%);
+  color: white;
+  padding: 80px 20px 40px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+  animation: fadeInUp 0.8s ease;
+}
+
+.footer-message {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  animation: fadeInUp 1s ease;
+}
+
+.footer-contact {
+  margin: 40px 0;
+  animation: fadeInUp 1.2s ease;
+}
+
+.footer-contact p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.contact-info a:hover {
+  opacity: 0.8;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+  animation: fadeInUp 1.4s ease;
+}
+
+.social-link {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeInUp 1.6s ease;
+}
+
+.footer-bottom p {
+  margin: 10px 0;
+  opacity: 0.9;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 20px 30px;
+  }
+
+  .footer-title {
+    font-size: 2rem;
+  }
+
+  .footer-message {
+    font-size: 1.1rem;
+  }
+
+  .footer-social {
+    gap: 20px;
+  }
+
+  .social-link {
+    font-size: 1.5rem;
+  }
+}
