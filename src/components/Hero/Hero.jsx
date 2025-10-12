@@ -1,4 +1,5 @@
 import './Hero.css'
+import HeroSlider from './HeroSlider'
 
 const Hero = ({ language }) => {
   const content = {
@@ -20,8 +21,17 @@ const Hero = ({ language }) => {
 
   const t = content[language]
 
+  // Replace these URLs with your own photos if desired
+  const heroImages = [
+    'https://images.unsplash.com/photo-1519741497674-611481863552?w=1600',
+    'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1600',
+    'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600'
+  ]
+
   return (
     <section className="hero" id="hero">
+      {/* Background slider behind overlay + content */}
+      <HeroSlider images={heroImages} />
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <p className="save-date">{t.saveTheDate}</p>
