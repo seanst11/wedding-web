@@ -15,8 +15,17 @@ const Navigation = ({ language, setLanguage }) => {
 
   const navItems = {
     en: ['Us', 'Our Story', 'Event Schedule', 'Album'],
-    vi: ['Chúng tôi', 'Câu chuyện', 'Lịch trình', 'Album']
+    vi: ['Chúng tôi', 'Câu chuyện', 'Lịch trình', 'Album'],
+    'zh-TW': ['我們', '故事', '行程', '相簿'],
+    ja: ['私たち', 'ストーリー', 'スケジュール', 'アルバム']
   }
+
+  const languages = [
+    { value: 'zh-TW', label: '繁中' },
+    { value: 'ja', label: '日本語' },
+    { value: 'en', label: 'EN' },
+    { value: 'vi', label: 'VI' }
+  ]
 
   const scrollToSection = (index) => {
     const sections = document.querySelectorAll('section')
@@ -30,7 +39,7 @@ const Navigation = ({ language, setLanguage }) => {
         <div className="nav-logo">S & H</div>
 
         <div className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-          {navItems[language].map((item, index) => (
+          {navItems[language]?.map((item, index) => (
             <button
               key={index}
               className="nav-item"
@@ -39,12 +48,18 @@ const Navigation = ({ language, setLanguage }) => {
               {item}
             </button>
           ))}
-          <button
+          <select
             className="lang-toggle"
-            onClick={() => setLanguage(language === 'en' ? 'vi' : 'en')}
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
+            aria-label="Language selector"
           >
-            {language === 'en' ? 'VI' : 'EN'}
-          </button>
+            {languages.map((opt) => (
+              <option key={opt.value} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
+          </select>
         </div>
 
         <button
@@ -61,3 +76,4 @@ const Navigation = ({ language, setLanguage }) => {
 }
 
 export default Navigation
+

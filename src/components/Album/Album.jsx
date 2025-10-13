@@ -7,15 +7,23 @@ const Album = ({ language }) => {
   const content = {
     en: {
       title: 'Our Album',
-      subtitle: 'Moments we\'ve shared together'
+      subtitle: "Moments we've shared together"
     },
     vi: {
       title: 'Album Của Chúng Tôi',
       subtitle: 'Những khoảnh khắc chúng tôi đã chia sẻ cùng nhau'
+    },
+    'zh-TW': {
+      title: '我們的相簿',
+      subtitle: '那些屬於我們的美好片刻'
+    },
+    ja: {
+      title: '私たちのアルバム',
+      subtitle: '二人の思い出の瞬間'
     }
   }
 
-  const t = content[language]
+  const t = content[language] || content.en
 
   // Placeholder images - replace with actual images
   const images = [
@@ -24,7 +32,7 @@ const Album = ({ language }) => {
     { id: 3, url: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800', alt: 'Couple photo 3' },
     { id: 4, url: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800', alt: 'Couple photo 4' },
     { id: 5, url: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800', alt: 'Couple photo 5' },
-    { id: 6, url: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800', alt: 'Couple photo 6' },
+    { id: 6, url: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800', alt: 'Couple photo 6' }
   ]
 
   return (
@@ -42,7 +50,7 @@ const Album = ({ language }) => {
           >
             <img src={image.url} alt={image.alt} loading="lazy" />
             <div className="album-overlay">
-              <span className="view-icon">👁️</span>
+              <span className="view-icon">🔍</span>
             </div>
           </div>
         ))}
@@ -63,3 +71,4 @@ const Album = ({ language }) => {
 }
 
 export default Album
+
