@@ -1,5 +1,6 @@
 import './Hero.css'
 import HeroSlider from './HeroSlider'
+import { loadMainImages } from '../../utils/loadImages'
 
 const Hero = ({ language }) => {
   const content = {
@@ -22,7 +23,7 @@ const Hero = ({ language }) => {
     'zh-TW': {
       saveTheDate: '婚禮邀請',
       date: '2025/12/07',
-      couple: 'Wu, Sung Tao (Sean) & Phan Thu Ha (Ha)',
+      couple: 'Sean & Ha',
       tagline:
         '若是你收到這封精心製作的電子喜帖，代表你是松濤或哈醬生命中舉足輕重的至親好友，謝謝你在過去某個時刻陪我們度過了某些值得紀念的時刻：可能是小時候的淘氣，爛醉的夜晚，互相加油打氣的熬夜準備等等。此刻，想和你分享我們這一特別的時刻 我們要結婚了！誠摯邀請你參加我們的婚禮，期待能在重要的日子見到重要的你！',
       rsvp: '回覆出席'
@@ -30,7 +31,7 @@ const Hero = ({ language }) => {
     ja: {
       saveTheDate: '結婚式のご案内',
       date: '2025年12月7日',
-      couple: 'Wu, Sung Tao (Sean) & Phan Thu Ha (Ha)',
+      couple: 'Sean & Ha',
       tagline:
         '家族とともに、私たちの結婚式へのご参列を心よりお待ちしております。',
       rsvp: '出欠連絡'
@@ -39,11 +40,14 @@ const Hero = ({ language }) => {
 
   const t = content[language] || content['zh-TW']
 
-  const heroImages = [
-    'https://images.unsplash.com/photo-1519741497674-611481863552?w=1600',
-    'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1600',
-    'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600'
-  ]
+  const localMain = loadMainImages()
+  const heroImages = localMain.length
+    ? localMain
+    : [
+        'https://images.unsplash.com/photo-1519741497674-611481863552?w=1600',
+        'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1600',
+        'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600'
+      ]
 
   return (
     <section className="hero" id="hero">
@@ -68,4 +72,3 @@ const Hero = ({ language }) => {
 }
 
 export default Hero
-

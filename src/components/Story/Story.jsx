@@ -1,4 +1,5 @@
 import './Story.css'
+import { loadStoryImages } from '../../utils/loadImages'
 
 const Story = ({ language }) => {
   const content = {
@@ -51,6 +52,7 @@ const Story = ({ language }) => {
   }
 
   const t = content[language] || content.en
+  const storyImages = loadStoryImages()
 
   return (
     <section className="story" id="story">
@@ -65,6 +67,9 @@ const Story = ({ language }) => {
               <div className="timeline-year">{item.year}</div>
               <h3 className="timeline-title">{item.title}</h3>
               <p className="timeline-description">{item.description}</p>
+              {storyImages[index] && (
+                <img src={storyImages[index]} alt={`Story ${index + 1}`} style={{ width: '100%', borderRadius: 8, marginTop: 12 }} />
+              )}
             </div>
             <div className="timeline-dot"></div>
           </div>
@@ -75,4 +80,3 @@ const Story = ({ language }) => {
 }
 
 export default Story
-
