@@ -28,6 +28,7 @@
   z-index: 2;
   animation: fadeInUp 1.2s ease;
   padding: 20px;
+  top: 10vh; /* push content downward to avoid faces */
 }
 
 .save-date {
@@ -173,5 +174,9 @@
 
   .divider-line {
     width: 50px;
+  }
+
+  .hero-content {
+    top: 6vh; /* slightly less offset on small screens */
   }
 }
