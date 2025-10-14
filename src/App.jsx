@@ -6,6 +6,7 @@ import VideoSection from './components/VideoSection/VideoSection'
 import Schedule from './components/Schedule/Schedule'
 import Album from './components/Album/Album'
 import Footer from './components/Footer/Footer'
+import Couple from './components/Couple/Couple'
 import './App.css'
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
     <div className="App">
       <Navigation language={language} setLanguage={setLanguage} />
       <Hero language={language} />
+      {/* Couple section intentionally not a <section> to keep nav anchors aligned */}
+      <Couple language={language} />
       <Story language={language} />
       {/* Video section intentionally not a <section> to keep nav anchors aligned */}
       <VideoSection language={language} />
