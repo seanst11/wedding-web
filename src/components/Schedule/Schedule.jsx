@@ -1,66 +1,93 @@
 import './Schedule.css'
 
+import imgHotel from '../../assets/others/和逸飯店.webp'
+import imgCeremony from '../../assets/others/婚宴桌面擺設參考.jpg'
+import imgFallback from '../../assets/others/PAL_744.jpg'
+
 const Schedule = ({ language }) => {
-  const content = {
-    en: {
-      title: 'Event Schedule',
-      subtitle: 'Join us as we celebrate our special day',
-      events: [
-        {
-          icon: '💍',
-          title: 'Wedding Ceremony',
-          time: '2:00 PM',
-          location: "St. Mary's Church",
-          address: '123 Main Street, City',
-          description:
-            'Join us for our wedding ceremony as we exchange vows and begin our journey together.'
-        },
-        {
-          icon: '🥂',
-          title: 'Cocktail Hour',
-          time: '4:00 PM',
-          location: 'Garden Terrace',
-          address: 'Same Venue',
-          description:
-            'Enjoy refreshments and mingle with other guests while we take photos.'
-        },
-        {
-          icon: '🍽️',
-          title: 'Reception Dinner',
-          time: '5:30 PM',
-          location: 'Grand Ballroom',
-          address: 'Same Venue',
-          description:
-            'Celebrate with us over a delicious dinner, speeches, and our first dance.'
-        },
-        {
-          icon: '🎉',
-          title: 'Dancing & Celebration',
-          time: '8:00 PM',
-          location: 'Dance Floor',
-          address: 'Same Venue',
-          description:
-            "Let's dance the night away and celebrate our new beginning!"
-        }
-      ]
-    },
-    vi: {
-      title: 'Lịch Trình Sự Kiện',
-      subtitle: 'Hãy tham gia cùng chúng tôi trong ngày đặc biệt',
-      events: [
-        {
-          icon: '💍',
-          title: 'Lễ Cưới',
-          time: '2:00 chiều',
-          location: 'Nhà thờ St. Mary',
-          address: '123 Phố Chính, Thành phố',
-          description: 'Cùng chúng tôi chứng kiến khoảnh khắc trao lời thề.'
-        }
-      ]
-    }
+  const mapLinkCozziBlu =
+    'https://www.google.com/maps/place/COZZI+Blu+Taoyuan/@25.0178434,121.211204,17z/data=!3m1!5s0x346821008206abb5:0x40e59f47301057a9!4m9!3m8!1s0x346821a7e4fcb1a3:0xe926522744c32b32!5m2!4m1!1i2!8m2!3d25.0178386!4d121.2137789!16s%2Fg%2F11fs_8w616?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D'
+
+  const enEvents = {
+    title: 'Event Schedule',
+    subtitle: 'A simple flow for a joyful day',
+    events: [
+      {
+        icon: '🕦',
+        title: 'Guest Arrival',
+        time: '11:30',
+        location: 'COZZI Blu Taoyuan',
+        address:
+          'COZZI Blu Hotel, Zhongli District, 101 Chunde Rd, Taoyuan 32056',
+        link: mapLinkCozziBlu,
+        image: imgHotel,
+        description: 'Arrive, relax, and say hello. Make yourself at home.'
+      },
+      {
+        icon: '💍',
+        title: 'Wedding Ceremony',
+        time: '12:00',
+        location: 'Pearl Hall · 3F · COZZI Blu',
+        address: 'Indoor ceremony and rings exchange',
+        image: imgCeremony,
+        description: 'A short, heartfelt ceremony to mark the beginning.'
+      },
+      {
+        icon: '🏁',
+        title: 'Reception Ends (Estimated)',
+        time: '14:30',
+        location: 'Same venue as ceremony',
+        address: 'Thank you for celebrating with us!',
+        image: imgFallback,
+        description: 'Warm farewells and safe travels.'
+      }
+    ]
   }
 
-  const t = content[language] || content.en
+  const zhTWEvents = {
+    title: '行程安排',
+    subtitle: '簡潔、溫馨，一起度過美好的一天',
+    events: [
+      {
+        icon: '🕦',
+        title: '賓客入場',
+        time: '11:30',
+        location: 'COZZI Blu Taoyuan · COZZI Blu 和逸飯店 桃園館',
+        address: '32056 桃園市中壢區春德路101號',
+        link: mapLinkCozziBlu,
+        image: imgHotel,
+        description: '提早抵達，輕鬆入席，現場備有人員引導。'
+      },
+      {
+        icon: '💍',
+        title: 'Wedding Ceremony',
+        time: '12:00',
+        location: '和逸飯店 桃園館 · 三樓 珍珠廳',
+        address: '室內證婚，敬請入席',
+        image: imgCeremony,
+        description: '見證誓言，共同迎接嶄新的開始。'
+      },
+      {
+        icon: '🏁',
+        title: '宴會結束（預計）',
+        time: '14:30',
+        location: '同上',
+        address: '感謝蒞臨，一路平安',
+        image: imgFallback,
+        description: '溫馨道別，敬祝賓客平安順心。'
+      }
+    ]
+  }
+
+  // Vietnamese and Japanese use English content as requested
+  const content = {
+    en: enEvents,
+    vi: enEvents,
+    ja: enEvents,
+    'zh-TW': zhTWEvents
+  }
+
+  const t = content[language] || enEvents
 
   return (
     <section className="schedule" id="schedule">
@@ -73,11 +100,25 @@ const Schedule = ({ language }) => {
             className="schedule-card"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
+            {event.image && (
+              <img
+                src={event.image}
+                alt={event.title}
+                className="schedule-image"
+                loading="lazy"
+              />
+            )}
             <div className="schedule-icon">{event.icon}</div>
             <h3 className="schedule-event-title">{event.title}</h3>
             <div className="schedule-time">{event.time}</div>
             <div className="schedule-location">
-              <strong>{event.location}</strong>
+              {event.link ? (
+                <a href={event.link} target="_blank" rel="noreferrer">
+                  <strong>{event.location}</strong>
+                </a>
+              ) : (
+                <strong>{event.location}</strong>
+              )}
               <br />
               {event.address}
             </div>
