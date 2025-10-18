@@ -13,7 +13,7 @@
 
 .schedule-actions {
   text-align: center;
-  margin-top: 12px; /* add breathing room below the venue label */
+  margin-top: 24px;
   margin-bottom: 40px;
 }
 
@@ -40,8 +40,8 @@
 .schedule-venue-label {
   text-align: center;
   color: var(--text-dark);
-  margin-top: 0; /* avoid overlapping subtitle */
-  margin-bottom: 12px; /* extra space above the button */
+  margin-top: -30px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 
