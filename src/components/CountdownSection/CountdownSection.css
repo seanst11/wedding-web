@@ -13,3 +13,38 @@
   color: var(--text-light);
   margin-top: 8px;
 }
+
+/* Add to calendar styles */
+.atc-container{
+  margin-top: 18px;
+}
+.atc-group{
+  display: inline-flex;
+  gap: 10px;
+}
+.atc-btn{
+  appearance: none;
+  border: 1px solid var(--primary-color);
+  background: white;
+  color: var(--primary-color);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: .3px;
+  transition: all .2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+.atc-btn.primary{
+  background: var(--primary-color);
+  color: white;
+}
+.atc-btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+.atc-hint{
+  margin-top: 8px;
+  color: var(--text-light);
+  font-size: .85rem;
+}
