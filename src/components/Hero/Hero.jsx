@@ -1,4 +1,4 @@
-import './Hero.css'
+﻿import './Hero.css'
 import HeroSlider from './HeroSlider'
 import { loadMainImages } from '../../utils/loadImages'
 
@@ -6,7 +6,7 @@ const Hero = ({ language }) => {
   const content = {
     en: {
       saveTheDate: 'Save The Date',
-      date: 'July 12, 2025',
+      date: 'Dec 07, 2025 11:30',
       couple: 'Sean & Ha',
       tagline:
         'Together with our families, we invite you to celebrate our wedding',
@@ -14,26 +14,26 @@ const Hero = ({ language }) => {
     },
     vi: {
       saveTheDate: 'Lưu Ngày',
-      date: '12 Tháng 7, 2025',
+      date: '07/12/2025 11:30',
       couple: 'Sơn & Hà',
       tagline:
-        'Cùng với gia đình, chúng tôi xin mời bạn đến dự lễ cưới của chúng tôi',
+        'Cùng gia đình, chúng tôi trân trọng mời bạn dự đám cưới của chúng tôi',
       rsvp: 'Xác nhận tham dự'
     },
     'zh-TW': {
       saveTheDate: '婚禮邀請',
-      date: '2025/12/07',
+      date: '2025/12/07 11:30',
       couple: 'Sean & Ha',
-      tagline: '我們與家人誠摯邀請您一同見證並慶賀我們的婚禮',
+      tagline: '誠摯邀請您與我們一同見證並慶祝婚禮',
       rsvp: '回覆出席'
     },
     ja: {
       saveTheDate: '結婚式のご案内',
-      date: '2025年12月7日',
+      date: '2025年12月7日 11:30',
       couple: 'Sean & Ha',
       tagline:
-        '家族とともに、私たちの結婚式へのご参列を心よりお待ちしております。',
-      rsvp: '出欠連絡'
+        '家族とともに 皆さまのご参列を心よりお待ちしております',
+      rsvp: '出欠回答'
     }
   }
 
@@ -53,7 +53,6 @@ const Hero = ({ language }) => {
       <HeroSlider images={heroImages} />
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <p className="save-date">{t.saveTheDate}</p>
         <h1 className="couple-names">{t.couple}</h1>
         <div className="date-divider">
           <span className="divider-line"></span>
@@ -71,4 +70,3 @@ const Hero = ({ language }) => {
 }
 
 export default Hero
-

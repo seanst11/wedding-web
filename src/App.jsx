@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import Navigation from './components/Navigation/Navigation'
 import Hero from './components/Hero/Hero'
 import Story from './components/Story/Story'
@@ -7,6 +7,7 @@ import Schedule from './components/Schedule/Schedule'
 import Album from './components/Album/Album'
 import Footer from './components/Footer/Footer'
 import Couple from './components/Couple/Couple'
+import CountdownSection from './components/CountdownSection/CountdownSection'
 import './App.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Hero language={language} />
       {/* Couple section intentionally not a <section> to keep nav anchors aligned */}
       <Couple language={language} />
+      <CountdownSection language={language} />
       <Story language={language} />
       {/* Video section intentionally not a <section> to keep nav anchors aligned */}
       <VideoSection language={language} />
@@ -29,3 +31,5 @@ function App() {
 }
 
 export default App
+
+
