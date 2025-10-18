@@ -28,8 +28,11 @@ const Navigation = ({ language, setLanguage }) => {
   ]
 
   const scrollToSection = (index) => {
-    const sections = document.querySelectorAll('section')
-    sections[index]?.scrollIntoView({ behavior: 'smooth' })
+    // Explicit mapping to avoid index drift from extra sections
+    const sectionIds = ['hero', 'story', 'schedule', 'album']
+    const id = sectionIds[index]
+    const el = id ? document.getElementById(id) : null
+    el?.scrollIntoView({ behavior: 'smooth' })
     setIsMobileMenuOpen(false)
   }
 
@@ -76,4 +79,3 @@ const Navigation = ({ language, setLanguage }) => {
 }
 
 export default Navigation
-
