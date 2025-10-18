@@ -16,7 +16,7 @@ const Schedule = ({ language }) => {
         icon: '🕦',
         title: 'Guest Arrival',
         time: '11:30',
-        location: 'COZZI Blu Taoyuan',
+        location: 'Pearl Hall · 3F · COZZI Blu Taoyuan',
         address:
           'COZZI Blu Hotel, Zhongli District, 101 Chunde Rd, Taoyuan 32056',
         link: mapLinkCozziBlu,
@@ -27,16 +27,16 @@ const Schedule = ({ language }) => {
         icon: '💍',
         title: 'Wedding Ceremony',
         time: '12:00',
-        location: 'Pearl Hall · 3F · COZZI Blu',
+        location: 'Pearl Hall · 3F · COZZI Blu Taoyuan',
         address: 'Indoor ceremony and rings exchange',
         image: imgCeremony,
         description: 'A short, heartfelt ceremony to mark the beginning.'
       },
       {
         icon: '🏁',
-        title: 'Reception Ends (Estimated)',
+        title: 'Reception Ends',
         time: '14:30',
-        location: 'Same venue as ceremony',
+        location: 'Pearl Hall · 3F · COZZI Blu Taoyuan',
         address: 'Thank you for celebrating with us!',
         image: imgFallback,
         description: 'Warm farewells and safe travels.'
@@ -52,7 +52,7 @@ const Schedule = ({ language }) => {
         icon: '🕦',
         title: '賓客入場',
         time: '11:30',
-        location: 'COZZI Blu Taoyuan · COZZI Blu 和逸飯店 桃園館',
+        location: 'Pearl Hall · 3F · COZZI Blu Taoyuan',
         address: '32056 桃園市中壢區春德路101號',
         link: mapLinkCozziBlu,
         image: imgHotel,
@@ -62,7 +62,7 @@ const Schedule = ({ language }) => {
         icon: '💍',
         title: 'Wedding Ceremony',
         time: '12:00',
-        location: '和逸飯店 桃園館 · 三樓 珍珠廳',
+        location: 'Pearl Hall · 3F · COZZI Blu Taoyuan',
         address: '室內證婚，敬請入席',
         image: imgCeremony,
         description: '見證誓言，共同迎接嶄新的開始。'
@@ -71,7 +71,7 @@ const Schedule = ({ language }) => {
         icon: '🏁',
         title: '宴會結束（預計）',
         time: '14:30',
-        location: '同上',
+        location: 'Pearl Hall · 3F · COZZI Blu Taoyuan',
         address: '感謝蒞臨，一路平安',
         image: imgFallback,
         description: '溫馨道別，敬祝賓客平安順心。'
@@ -93,6 +93,20 @@ const Schedule = ({ language }) => {
     <section className="schedule" id="schedule">
       <h2 className="section-title">{t.title}</h2>
       <p className="schedule-subtitle">{t.subtitle}</p>
+      <div className="schedule-venue-label">
+        {language === 'zh-TW' ? '典禮會場：COZZI Blu Taoyuan' : 'Ceremony Venue: COZZI Blu Taoyuan'}
+      </div>
+      <div className="schedule-actions">
+        <a
+          className="map-button"
+          href={mapLinkCozziBlu}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Open COZZI Blu on Google Maps"
+        >
+          {language === 'zh-TW' ? '開啟 Google 地圖' : 'Open in Google Maps'}
+        </a>
+      </div>
       <div className="schedule-grid">
         {t.events.map((event, index) => (
           <div
@@ -131,4 +145,3 @@ const Schedule = ({ language }) => {
 }
 
 export default Schedule
-
