@@ -1,15 +1,15 @@
-.couple {
+﻿.couple {
   background: #0e3b38;
   position: relative;
-  padding: 80px 20px;
+  padding: 96px 20px 88px;
 }
 
 .couple-grid {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  gap: 36px;
   align-items: start;
 }
 
@@ -21,12 +21,12 @@
 }
 
 .avatar-wrap {
-  width: 220px;
-  height: 220px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   overflow: hidden;
-  border: 6px solid var(--primary-color);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border: 8px solid var(--primary-color);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.38);
   background: rgba(255, 255, 255, 0.6);
   z-index: 2;
 }
@@ -39,20 +39,20 @@
 
 .card {
   width: 100%;
-  max-width: 420px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 18px;
-  padding: 28px 24px 32px;
-  margin-top: -40px; /* lift under avatar */
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  padding: 72px 28px 36px; /* create space so text isn't blocked by avatar */
+  margin-top: -56px; /* gentle overlap beneath the avatar */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   color: var(--white);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.28);
 }
 
 .name {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: var(--white);
   margin-bottom: 6px;
 }
@@ -64,23 +64,44 @@
 
 .heart-decor {
   position: absolute;
-  top: 36px;
+  top: 22px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 28px;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.heart-decor svg {
+  width: 140px;
+  height: 70px;
+  display: block;
+  opacity: 0.8;
+}
+
+.heart-decor .heart-path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.8);
+  stroke-width: 2.5;
 }
 
 @media (max-width: 768px) {
   .couple {
-    padding: 60px 16px;
+    padding: 64px 16px 64px;
   }
   .couple-grid {
     grid-template-columns: 1fr;
   }
   .avatar-wrap {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
+    border-width: 6px;
+  }
+  .card {
+    margin-top: -44px;
+    padding-top: 56px;
+  }
+  .heart-decor svg {
+    width: 100px;
+    height: 50px;
   }
 }
 
