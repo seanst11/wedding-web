@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
+import { useCsvI18n } from '../../i18n/csvI18n'
 import './Navigation.css'
 
 const Navigation = ({ language, setLanguage }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { t } = useCsvI18n()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,12 +15,11 @@ const Navigation = ({ language, setLanguage }) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navItems = {
-    en: ['Us', 'Our Story', 'Event Schedule', 'Album'],
-    vi: ['Chúng tôi', 'Câu chuyện', 'Lịch trình', 'Album'],
-    'zh-TW': ['我們', '故事', '行程', '相簿'],
-    ja: ['私たち', 'ストーリー', 'スケジュール', 'アルバム']
-  }
+  const FILE = 'src/components/Navigation/Navigation.jsx'
+  const navEn = ['Us', 'Our Story', 'Event Schedule', 'Album']
+  const navItems = [0, 1, 2, 3].map((i) =>
+    t(FILE, `navItems.title[${i}]`, language, navEn[i])
+  )
 
   const languages = [
     { value: 'zh-TW', label: '繁中' },
@@ -28,7 +29,6 @@ const Navigation = ({ language, setLanguage }) => {
   ]
 
   const scrollToSection = (index) => {
-    // Explicit mapping to avoid index drift from extra sections
     const sectionIds = ['hero', 'story', 'schedule', 'album']
     const id = sectionIds[index]
     const el = id ? document.getElementById(id) : null
@@ -42,7 +42,7 @@ const Navigation = ({ language, setLanguage }) => {
         <div className="nav-logo">S & H</div>
 
         <div className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-          {navItems[language]?.map((item, index) => (
+          {navItems.map((item, index) => (
             <button
               key={index}
               className="nav-item"
@@ -79,3 +79,4 @@ const Navigation = ({ language, setLanguage }) => {
 }
 
 export default Navigation
+

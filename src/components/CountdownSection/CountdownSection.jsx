@@ -1,40 +1,27 @@
-﻿import './CountdownSection.css'
+import './CountdownSection.css'
 import Countdown from '../Countdown/Countdown'
+import { useCsvI18n } from '../../i18n/csvI18n'
+
+const FILE = 'src/components/CountdownSection/CountdownSection.jsx'
 
 const CountdownSection = ({ language }) => {
-  const content = {
-    en: {
-      title: 'Save The Date',
-      date: 'Dec 07, 2025 • 11:30',
-      message: "We can't wait to see you there."
-    },
-    'zh-TW': {
-      title: '婚禮倒數',
-      date: '2025/12/07 11:30',
-      message: '我們很期待看到您。'
-    },
-    vi: {
-      title: 'Ngày Cưới',
-      date: '07/12/2025 • 11:30',
-      message: 'Chúng tôi rất mong được gặp bạn.'
-    },
-    ja: {
-      title: 'カウントダウン',
-      date: '2025年12月7日 11:30',
-      message: '皆さまにお会いできるのを楽しみにしています。'
-    }
-  }
-
-  const t = content[language] || content['zh-TW']
+  const { t } = useCsvI18n()
+  const title = t(FILE, 'title', language, 'Save The Date')
+  const date = t(FILE, 'date', language, 'Dec 07, 2025 11:30')
+  const message = t(
+    FILE,
+    'message',
+    language,
+    "We can't wait to see you there."
+  )
 
   return (
     <section className="countdown-section" id="countdown">
-      <h2 className="section-title">{t.title}</h2>
-      <div className="count-date">{t.date}</div>
+      <h2 className="section-title">{title}</h2>
+      <div className="count-date">{date}</div>
       <Countdown target="2025-12-07T11:30:00" />
-      <p className="count-message">{t.message}</p>
+      <p className="count-message">{message}</p>
 
-      {/* Add-to-calendar actions */}
       <AddToCalendar language={language} />
     </section>
   )
@@ -42,27 +29,29 @@ const CountdownSection = ({ language }) => {
 
 export default CountdownSection
 
-// Lightweight Add to Calendar below the countdown
 const AddToCalendar = ({ language }) => {
+  const { t } = useCsvI18n()
+  const labels = {
+    add: t(FILE, 'atc.add', language, 'Add to Calendar'),
+    google: t(FILE, 'atc.google', language, 'Google'),
+    ics: t(FILE, 'atc.ics', language, 'Apple / Outlook / Teams'),
+    hint: t(
+      FILE,
+      'atc.hint',
+      language,
+      'Compatible with Google, Apple, Outlook, Teams'
+    )
+  }
+
   const event = {
     title: 'S & H Wedding',
     start: '2025-12-07T11:30:00',
     end: '2025-12-07T14:30:00',
-    location:
-      'COZZI Blu Taoyuan · COZZI Blu 和逸飯店 桃園館, 32056 桃園市中壢區春德路101號',
-    details: "We can't wait to see you there."
+    location: 'COZZI Blu Taoyuan, Pearl Hall · 3F',
+    details: labels.hint
   }
 
-  const labels = {
-    en: { add: 'Add to Calendar', google: 'Google', ics: 'Apple / Outlook / Teams' },
-    'zh-TW': { add: '加入行事曆', google: 'Google', ics: 'Apple / Outlook / Teams' },
-    vi: { add: 'Add to Calendar', google: 'Google', ics: 'Apple / Outlook / Teams' },
-    ja: { add: 'Add to Calendar', google: 'Google', ics: 'Apple / Outlook / Teams' }
-  }
-
-  const t = labels[language] || labels['zh-TW']
-
-  const fmtLocal = (iso) => iso.replace(/[-:]/g, '').slice(0, 15) // YYYYMMDDTHHMMSS
+  const fmtLocal = (iso) => iso.replace(/[-:]/g, '').slice(0, 15)
 
   const googleUrl = () => {
     const base = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
@@ -113,20 +102,16 @@ const AddToCalendar = ({ language }) => {
 
   return (
     <div className="atc-container">
-      <div className="atc-group" role="group" aria-label={t.add}>
-        <a
-          className="atc-btn primary"
-          href={googleUrl()}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {t.add} · {t.google}
+      <div className="atc-group" role="group" aria-label={labels.add}>
+        <a className="atc-btn primary" href={googleUrl()} target="_blank" rel="noreferrer">
+          {labels.add} · {labels.google}
         </a>
         <button className="atc-btn" onClick={downloadICS}>
-          {t.add} · {t.ics}
+          {labels.add} · {labels.ics}
         </button>
       </div>
-      <div className="atc-hint">Compatible with Google, Apple, Outlook, Teams</div>
+      <div className="atc-hint">{labels.hint}</div>
     </div>
   )
 }
+

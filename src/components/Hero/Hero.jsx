@@ -1,43 +1,25 @@
-﻿import './Hero.css'
+import './Hero.css'
 import HeroSlider from './HeroSlider'
 import { loadMainImages } from '../../utils/loadImages'
+import { useCsvI18n } from '../../i18n/csvI18n'
+
+const FILE = 'src/components/Hero/Hero.jsx'
 
 const Hero = ({ language }) => {
-  const content = {
-    en: {
-      saveTheDate: 'Save The Date',
-      date: 'Dec 07, 2025 11:30',
-      couple: 'Sean & Ha',
-      tagline:
-        'Together with our families, we invite you to celebrate our wedding',
-      rsvp: 'RSVP'
-    },
-    vi: {
-      saveTheDate: 'Lưu Ngày',
-      date: '07/12/2025 11:30',
-      couple: 'Sơn & Hà',
-      tagline:
-        'Cùng gia đình, chúng tôi trân trọng mời bạn dự đám cưới của chúng tôi',
-      rsvp: 'Xác nhận tham dự'
-    },
-    'zh-TW': {
-      saveTheDate: '婚禮邀請',
-      date: '2025/12/07 11:30',
-      couple: 'Sean & Ha',
-      tagline: '誠摯邀請您與我們一同見證並慶祝婚禮',
-      rsvp: '回覆出席'
-    },
-    ja: {
-      saveTheDate: '結婚式のご案内',
-      date: '2025年12月7日 11:30',
-      couple: 'Sean & Ha',
-      tagline:
-        '家族とともに 皆さまのご参列を心よりお待ちしております',
-      rsvp: '出欠回答'
-    }
-  }
+  const { t } = useCsvI18n()
 
-  const t = content[language] || content['zh-TW']
+  const content = {
+    saveTheDate: t(FILE, 'saveTheDate', language, 'Save The Date'),
+    date: t(FILE, 'date', language, 'Dec 07, 2025 11:30'),
+    couple: t(FILE, 'couple', language, 'Sean & Ha'),
+    tagline: t(
+      FILE,
+      'tagline',
+      language,
+      'Together with our families, we invite you to celebrate our wedding'
+    ),
+    rsvp: t(FILE, 'rsvp', language, 'RSVP')
+  }
 
   const localMain = loadMainImages()
   const heroImages = localMain.length
@@ -53,14 +35,14 @@ const Hero = ({ language }) => {
       <HeroSlider images={heroImages} />
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <h1 className="couple-names">{t.couple}</h1>
+        <h1 className="couple-names">{content.couple}</h1>
         <div className="date-divider">
           <span className="divider-line"></span>
-          <span className="date-text">{t.date}</span>
+          <span className="date-text">{content.date}</span>
           <span className="divider-line"></span>
         </div>
-        <p className="tagline">{t.tagline}</p>
-        <button className="rsvp-button">{t.rsvp}</button>
+        <p className="tagline">{content.tagline}</p>
+        <button className="rsvp-button">{content.rsvp}</button>
       </div>
       <div className="scroll-indicator">
         <div className="scroll-arrow"></div>
@@ -70,3 +52,4 @@ const Hero = ({ language }) => {
 }
 
 export default Hero
+

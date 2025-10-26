@@ -1,65 +1,47 @@
-﻿import "./Couple.css";
+import "./Couple.css";
 import groomImg from "../../assets/profile/bride.jpg";
 import brideImg from "../../assets/profile/groom.jpg";
+import { useCsvI18n } from "../../i18n/csvI18n";
+
+const FILE = "src/components/Couple/Couple.jsx";
 
 const Couple = ({ language }) => {
-  const content = {
-    en: {
-      title: "Us",
-      groomName: "Sean",
-      brideName: "Ha",
-      groomNote: "Cat's dad",
-      brideNote: "Cat's mom",
-    },
-    "zh-TW": {
-      title: "我們",
-      groomName: "Sean",
-      brideName: "Ha",
-      groomNote: "貓的爸爸",
-      brideNote: "貓的媽媽",
-    },
-    vi: {
-      title: "Chúng tôi",
-      groomName: "Sơn",
-      brideName: "Hà",
-      groomNote: "Ba của mèo",
-      brideNote: "Mẹ của mèo",
-    },
-    ja: {
-      title: "私たち",
-      groomName: "ショーン",
-      brideName: "ハ",
-      groomNote: "ねこのお父さん",
-      brideNote: "ねこのお母さん",
-    },
-  };
+  const { t } = useCsvI18n();
 
-  const t = content[language] || content["en"];
+  const tr = (key, fallback) => t(FILE, key, language, fallback);
+
+  const content = {
+    title: tr("title", "Us"),
+    groomName: tr("groomName", "Sean"),
+    brideName: tr("brideName", "Ha"),
+    groomNote: tr("groomNote", "Cat's dad"),
+    brideNote: tr("brideNote", "Cat's mom"),
+  };
 
   return (
     // Not a <section> to keep Navigation anchors aligned
-    <div className="couple" aria-label={t.title}>
+    <div className="couple" aria-label={content.title}>
       <h2 className="section-title" style={{ color: "var(--white)" }}>
-        {t.title}
+        {content.title}
       </h2>
       <div className="couple-grid">
         <div className="profile-card">
           <div className="avatar-wrap">
-            <img className="avatar" src={groomImg} alt={t.groomName} />
+            <img className="avatar" src={groomImg} alt={content.groomName} />
           </div>
           <div className="card">
-            <h3 className="name">{t.groomName}</h3>
-            <p className="note">{t.groomNote}</p>
+            <h3 className="name">{content.groomName}</h3>
+            <p className="note">{content.groomNote}</p>
           </div>
         </div>
 
         <div className="profile-card">
           <div className="avatar-wrap">
-            <img className="avatar" src={brideImg} alt={t.brideName} />
+            <img className="avatar" src={brideImg} alt={content.brideName} />
           </div>
           <div className="card">
-            <h3 className="name">{t.brideName}</h3>
-            <p className="note">{t.brideNote}</p>
+            <h3 className="name">{content.brideName}</h3>
+            <p className="note">{content.brideNote}</p>
           </div>
         </div>
       </div>
@@ -80,5 +62,4 @@ const Couple = ({ language }) => {
 };
 
 export default Couple;
-
 

@@ -1,30 +1,18 @@
 import { useState } from 'react'
 import './Album.css'
 import { loadAlbumImages } from '../../utils/loadImages'
+import { useCsvI18n } from '../../i18n/csvI18n'
+
+const FILE = 'src/components/Album/Album.jsx'
 
 const Album = ({ language }) => {
   const [selectedImage, setSelectedImage] = useState(null)
+  const { t } = useCsvI18n()
 
-  const content = {
-    en: {
-      title: 'Our Album',
-      subtitle: "Moments we've shared together"
-    },
-    vi: {
-      title: 'Album Của Chúng Tôi',
-      subtitle: 'Những khoảnh khắc chúng tôi đã chia sẻ cùng nhau'
-    },
-    'zh-TW': {
-      title: '我們的相簿',
-      subtitle: '那些屬於我們的美好片刻'
-    },
-    ja: {
-      title: '私たちのアルバム',
-      subtitle: '二人の思い出の瞬間'
-    }
+  const labels = {
+    title: t(FILE, 'title', language, 'Our Album'),
+    subtitle: t(FILE, 'subtitle', language, "Moments we've shared together")
   }
-
-  const t = content[language] || content.en
 
   const localAlbum = loadAlbumImages()
   const images = localAlbum.length
@@ -40,8 +28,8 @@ const Album = ({ language }) => {
 
   return (
     <section className="album" id="album">
-      <h2 className="section-title">{t.title}</h2>
-      <p className="album-subtitle">{t.subtitle}</p>
+      <h2 className="section-title">{labels.title}</h2>
+      <p className="album-subtitle">{labels.subtitle}</p>
 
       <div className="album-grid">
         {images.map((image, index) => (
@@ -62,7 +50,7 @@ const Album = ({ language }) => {
       {selectedImage && (
         <div className="lightbox" onClick={() => setSelectedImage(null)}>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <button className="lightbox-close" onClick={() => setSelectedImage(null)}>
+            <button className="lightbox-close" onClick={() => setSelectedImage(null)} aria-label="Close">
               ×
             </button>
             <img src={selectedImage.url} alt={selectedImage.alt} />
@@ -74,3 +62,4 @@ const Album = ({ language }) => {
 }
 
 export default Album
+

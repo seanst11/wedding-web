@@ -1,15 +1,13 @@
 import { useState } from 'react'
 import './VideoSection.css'
 import bgImage from '../../assets/others/PAL_744.jpg'
+import { useCsvI18n } from '../../i18n/csvI18n'
+
+const FILE = 'src/components/VideoSection/VideoSection.jsx'
 
 const VideoSection = ({ language }) => {
-  const content = {
-    en: { title: 'Our Wedding Video in Vietnam' },
-    vi: { title: 'Video Đám Cưới Của Chúng Tôi tại Việt Nam' },
-    'zh-TW': { title: '我們在越南的婚禮影片' },
-    ja: { title: 'ベトナムでの私たちの結婚式動画' }
-  }
-  const t = content[language] || content['zh-TW']
+  const { t } = useCsvI18n()
+  const title = t(FILE, 'title', language, 'Our Wedding Video in Vietnam')
 
   const [open, setOpen] = useState(false)
   const videoId = 'b6-FZMvERkw'
@@ -19,7 +17,7 @@ const VideoSection = ({ language }) => {
     <div className="video-hero" style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="video-overlay" />
       <div className="video-content">
-        <h2 className="video-title">{t.title}</h2>
+        <h2 className="video-title">{title}</h2>
         <button className="video-play" onClick={() => setOpen(true)} aria-label="Play wedding video">
           ▶
         </button>
