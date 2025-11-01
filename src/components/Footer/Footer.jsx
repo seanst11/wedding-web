@@ -31,12 +31,6 @@ const Footer = ({ language }) => {
           </div>
         </div>
 
-        <div className="footer-social">
-          <a href="#" className="social-link" aria-label="Instagram">IG</a>
-          <a href="#" className="social-link" aria-label="Facebook">FB</a>
-          <a href={`mailto:${data.email}`} className="social-link" aria-label="Email">Mail</a>
-        </div>
-
         <div className="footer-bottom">
           <p>{data.madeWith} ❤️</p>
           <p className="copyright">{data.rights}</p>
