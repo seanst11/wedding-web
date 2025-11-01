@@ -10,11 +10,11 @@ src/components/Navigation/Navigation.jsx:22 languages.vi,繁中,EN,日本語,VI
 src/components/Hero/Hero.jsx:7 saveTheDate,儲存日期,Save The Date,Save The Date,Save The Date
 src/components/Hero/Hero.jsx:8 date,2025/12/07 11:30,"Dec 07, 2025 11:30",2025年12月7日 11:30,07/12/2025 11:30
 src/components/Hero/Hero.jsx:9 couple,Sean & Ha,Sean & Ha,Sean & Ha,Sean & Hà
-src/components/Hero/Hero.jsx:10 tagline,誠摯邀請您參加婚禮,"Together with our families, we invite you to celebrate our wedding",このたび　私たちは結婚することとなりました,Chúng tôi trân trọng mời bạn đến dự tiệc cưới
+src/components/Hero/Hero.jsx:10 tagline,誠摯邀請您參加婚禮,"Together with our families, we invite you to celebrate our wedding",このたび　私たちは結婚することとなりました,Trân trọng mời bạn đến dự tiệc cưới của chúng mình
 src/components/Hero/Hero.jsx:11 rsvp,傳訊息給我們！,Send us a message!,お祝いメッセージを送る,Gửi lời nhắn tới chúng mình
 src/components/Couple/Couple.jsx:7 title,我們,Us,私たちは,Chúng mình là
-src/components/Couple/Couple.jsx:8 groomName,Sean,Sean,ショーン,Sean
-src/components/Couple/Couple.jsx:9 brideName,Ha,Ha,ハー,Hà
+src/components/Couple/Couple.jsx:8 groomName,松濤(Sean),Sean,ショーン,Sean
+src/components/Couple/Couple.jsx:9 brideName,哈醬(Ha),Ha,ハー,Hà
 src/components/Couple/Couple.jsx:10 groomNote,貓爸,Cat's dad,猫のパパ,Ba của mèo
 src/components/Couple/Couple.jsx:11 brideNote,貓媽,Cat's mom,猫のママ,Mẹ của mèo
 src/components/CountdownSection/CountdownSection.jsx:6 title,記下這個日期,Save The Date,Save The Date,Save The Date
@@ -72,7 +72,7 @@ src/components/Message/Message.jsx:27 sendingButton,送出中...,Sending...,送�
 src/components/Message/Message.jsx:28 successMessage,感謝您！您的留言已成功送出！,Thank you! Your message has been sent successfully!,ありがとうございます！メッセージが正常に送信されました！,Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công!
 src/components/Message/Message.jsx:33 errorMessage,糟糕！發生了一些問題。請再試一次或直接聯絡我們。,Oops! Something went wrong. Please try again or contact us directly.,申し訳ございません！問題が発生しました。もう一度お試しいただくか、直接ご連絡ください。,Rất tiếc! Đã xảy ra lỗi. Vui lòng thử lại hoặc liên hệ trực tiếp với chúng mình.
 src/components/Footer/Footer.jsx:6 thankYou,謝謝您,Thank You,ご覧いただき誠にありがとうございます！,Xin chân thành cảm ơn
-src/components/Footer/Footer.jsx:7 message,期待您的蒞臨！,We can't wait to celebrate with you!,ご一緒にお祝いできるのを楽しみにしています！,Chúng tôi rất mong được ăn mừng cùng bạn!
+src/components/Footer/Footer.jsx:7 message,期待您的蒞臨！,We can't wait to celebrate with you!,ご一緒にお祝いできるのを楽しみにしています！,Rất hi vọng được chia sẻ khoảnh khắc đặc biệt này cùng bạn!
 src/components/Footer/Footer.jsx:8 contact,若有任何問題，請聯絡：,"For any questions, please contact:",ご不明点があればハー（あるいはショーン）までご連絡ください。,"Nếu có bất kỳ câu hỏi nào, vui lòng liên hệ:"
 src/components/Footer/Footer.jsx:9 madeWith,以愛製作,Made with love,Made with love,Made with love
 src/components/Footer/Footer.jsx:10 rights,2025 Sean & Ha. 版權所有。,2025 Sean & Ha. All rights reserved.,2025 Sean & Ha. All rights reserved.,2025 Sean & Ha. All rights reserved.
