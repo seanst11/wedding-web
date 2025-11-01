@@ -11,7 +11,7 @@ src/components/Hero/Hero.jsx:7 saveTheDate,儲存日期,Save The Date,Save The D
 src/components/Hero/Hero.jsx:8 date,2025/12/07 11:30,"Dec 07, 2025 11:30",2025年12月7日 11:30,07/12/2025 11:30
 src/components/Hero/Hero.jsx:9 couple,Sean & Ha,Sean & Ha,Sean & Ha,Sean & Hà
 src/components/Hero/Hero.jsx:10 tagline,誠摯邀請您參加婚禮,"Together with our families, we invite you to celebrate our wedding",このたび　私たちは結婚することとなりました,Chúng tôi trân trọng mời bạn đến dự tiệc cưới
-src/components/Hero/Hero.jsx:11 rsvp,回覆出席,RSVP,出席確認,Xác nhận tham dự
+src/components/Hero/Hero.jsx:11 rsvp,傳訊息給我們！,Send us a message!,お祝いメッセージを送る,Gửi lời nhắn tới chúng mình
 src/components/Couple/Couple.jsx:7 title,我們,Us,私たちは,Chúng mình là
 src/components/Couple/Couple.jsx:8 groomName,Sean,Sean,ショーン,Sean
 src/components/Couple/Couple.jsx:9 brideName,Ha,Ha,ハー,Hà
@@ -31,7 +31,7 @@ src/components/Story/Story.jsx:12 timeline[0].description,我們的故事始於�
 あの時の私たちは、ただ純粋でまっすぐな気持ちで旅を始めたんです。
 まさか6年後の今も、こうして手を取り合って歩き続けているなんて、あの頃の私たちはきっと想像もしていなかったでしょう。","Câu chuyện của chúng mình bắt đầu 6 năm trước tại Tokyo. Khi đó, Hà đang học cao học, còn Sean là sinh viên trao đổi. Chúng mình bắt đầu chuyến hành trình của mình với những cảm xúc ngây thơ và chân thành, không nghĩ rằng 2 đứa vẫn sẽ tiếp tục nắm tay nhau qua cả chặng đường dài phía trước cho tới tận hôm nay."
 src/components/Story/Story.jsx:20 timeline[1].title,相距一千六百公里的愛,"Love from 1,600 kilometers away",1600kmの距離を越えて,Những chuyến bay vượt khoảng cách 1.600 km
-src/components/Story/Story.jsx:21 timeline[1].description,我們之間遠距離相戀接近五年。彼此都在努力成為更好的自己。這段遠距離的歲月雖然常常吵架，但也讓我們更加信任與理解彼此。,"We loved each other across two countries for almost five years. In our place, we worked to become better versions of ourselves. It was often hard and challenging; however, it deepened our trust and understanding more than ever.","私たちは、2つの国で約5年間の遠距離恋愛を続けてきました。
+src/components/Story/Story.jsx:21 timeline[1].description,我們之間遠距離相戀接近五年。彼此都在努力成為更好的自己。這段時間雖然常常吵架，但也讓我們更加信任與理解彼此。,"We loved each other across two countries for almost five years. In our place, we worked to become better versions of ourselves. It was often hard and challenging; however, it deepened our trust and understanding more than ever.","私たちは、2つの国で約5年間の遠距離恋愛を続けてきました。
 ハーもショーンも、それぞれ台湾とベトナムで、自分のベストな姿になれるよう努力してきました。
 離れている時間は時に本当に辛くて、試練の連続でした。
 でもその分、お互いを信じる気持ちと、理解し合う心が、前よりずっと強くなったと思います。","Chúng mình đã yêu xa trong gần 5 năm từ 2 đất nước. Cả Hà và Sean đều nỗ lực cố gắng trở thành phiên bản tốt nhất của mình tại Đài Loan và Việt Nam. Quãng thời gian yêu xa ấy nhiều khi thật khó khăn và đầy thử thách, nhưng bù lại nó lại khiến chúng mình tin tưởng và thấu hiểu nhau hơn bao giờ hết."
