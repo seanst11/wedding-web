@@ -85,7 +85,40 @@ VITE_EMAILJS_PUBLIC_KEY=AbCdEfGhIjKlMnOp
 
 ⚠️ **重要**：`.env` 檔案已經加入 `.gitignore`，不會被提交到 Git，請妥善保管。
 
-### 步驟 6：測試設定
+### 步驟 6：設定 GitHub Secrets（用於 GitHub Pages 部署）
+
+如果您要部署到 GitHub Pages，還需要在 GitHub Repository 中設定 Secrets：
+
+1. 前往您的 GitHub Repository 頁面
+2. 點擊「Settings」（設定）
+3. 在左側選單中，點擊「Secrets and variables」→「Actions」
+4. 點擊「New repository secret」按鈕
+5. 依序新增以下 3 個 secrets：
+
+   **Secret 1:**
+   - Name: `VITE_EMAILJS_SERVICE_ID`
+   - Secret: 填入您的 Service ID（例如：`service_abc123`）
+   - 點擊「Add secret」
+
+   **Secret 2:**
+   - Name: `VITE_EMAILJS_TEMPLATE_ID`
+   - Secret: 填入您的 Template ID（例如：`template_xyz789`）
+   - 點擊「Add secret」
+
+   **Secret 3:**
+   - Name: `VITE_EMAILJS_PUBLIC_KEY`
+   - Secret: 填入您的 Public Key（例如：`AbCdEfGhIjKlMnOp`）
+   - 點擊「Add secret」
+
+6. 設定完成後，推送任何程式碼到 `main` branch，GitHub Actions 會自動使用這些 Secrets 進行部署
+
+**為什麼需要 GitHub Secrets？**
+- `.env` 檔案不會被提交到 Git（被 `.gitignore` 忽略）
+- GitHub Pages 部署時需要在構建階段注入環境變數
+- GitHub Secrets 提供安全的方式儲存敏感資訊
+- 只有有權限的人可以查看和修改 Secrets
+
+### 步驟 7：測試設定
 
 1. 啟動開發伺服器：
 ```bash
@@ -118,7 +151,7 @@ EmailJS 免費方案包含：
 
 ## 🔧 故障排除
 
-### 問題：送出後顯示錯誤訊息
+### 問題：本地開發時送出後顯示錯誤訊息
 
 **可能原因：**
 1. 環境變數未正確設定
@@ -129,6 +162,24 @@ EmailJS 免費方案包含：
 1. 檢查 `.env` 檔案中的值是否正確
 2. 確認 EmailJS Dashboard 中的設定
 3. 重新啟動開發伺服器
+
+### 問題：GitHub Pages 部署後顯示「Email 服務尚未設定」
+
+**可能原因：**
+1. GitHub Secrets 未正確設定
+2. Secret 的名稱拼寫錯誤
+3. GitHub Actions workflow 未正確讀取 Secrets
+
+**解決方法：**
+1. 前往 GitHub Repository → Settings → Secrets and variables → Actions
+2. 確認以下 3 個 Secrets 都已正確新增：
+   - `VITE_EMAILJS_SERVICE_ID`
+   - `VITE_EMAILJS_TEMPLATE_ID`
+   - `VITE_EMAILJS_PUBLIC_KEY`
+3. 檢查 Secret 的值是否正確（可以刪除後重新新增）
+4. 確認 `.github/workflows/deploy.yml` 中的 `env` 設定正確
+5. 重新推送程式碼觸發部署，或在 GitHub Actions 頁面手動觸發 workflow
+6. 查看 GitHub Actions 的 build logs，確認沒有錯誤訊息
 
 ### 問題：Email 沒有收到
 
