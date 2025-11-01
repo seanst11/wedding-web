@@ -1,7 +1,7 @@
 文案位置,中文 (zh‑TW),英文 (en),日語 (ja),越語 (vi)
 src/components/Navigation/Navigation.jsx:14 navItems.title[0],我們,Us,私たちについて,Chúng mình
 src/components/Navigation/Navigation.jsx:14 navItems.title[1],我們的故事,Our Story,私たちのストーリー,Câu chuyện của chúng mình
-src/components/Navigation/Navigation.jsx:14 navItems.title[2],行程,Event Schedule,当日のスケジュール,Lịch trình tiệc cưới
+src/components/Navigation/Navigation.jsx:14 navItems.title[2],當日行程,Event Schedule,当日のスケジュール,Lịch trình tiệc cưới
 src/components/Navigation/Navigation.jsx:14 navItems.title[3],相簿,Album,アルバム,Album
 src/components/Navigation/Navigation.jsx:22 languages.zh‑TW,繁中,EN,日本語,VI
 src/components/Navigation/Navigation.jsx:22 languages.ja,日本語,EN,日本語,VI
@@ -10,7 +10,7 @@ src/components/Navigation/Navigation.jsx:22 languages.vi,繁中,EN,日本語,VI
 src/components/Hero/Hero.jsx:7 saveTheDate,儲存日期,Save The Date,Save The Date,Save The Date
 src/components/Hero/Hero.jsx:8 date,2025/12/07 11:30,"Dec 07, 2025 11:30",2025年12月7日 11:30,07/12/2025 11:30
 src/components/Hero/Hero.jsx:9 couple,Sean & Ha,Sean & Ha,Sean & Ha,Sean & Hà
-src/components/Hero/Hero.jsx:10 tagline,邀請您與我們一同見證婚禮,"Together with our families, we invite you to celebrate our wedding",このたび　私たちは結婚することとなりました,Chúng tôi trân trọng mời bạn đến dự tiệc cưới
+src/components/Hero/Hero.jsx:10 tagline,誠摯邀請您參加婚禮,"Together with our families, we invite you to celebrate our wedding",このたび　私たちは結婚することとなりました,Chúng tôi trân trọng mời bạn đến dự tiệc cưới
 src/components/Hero/Hero.jsx:11 rsvp,回覆出席,RSVP,出席確認,Xác nhận tham dự
 src/components/Couple/Couple.jsx:7 title,我們,Us,私たちは,Chúng mình là
 src/components/Couple/Couple.jsx:8 groomName,Sean,Sean,ショーン,Sean
@@ -36,14 +36,14 @@ src/components/Story/Story.jsx:21 timeline[1].description,我們之間遠距離�
 離れている時間は時に本当に辛くて、試練の連続でした。
 でもその分、お互いを信じる気持ちと、理解し合う心が、前よりずっと強くなったと思います。","Chúng mình đã yêu xa trong gần 5 năm từ 2 đất nước. Cả Hà và Sean đều nỗ lực cố gắng trở thành phiên bản tốt nhất của mình tại Đài Loan và Việt Nam. Quãng thời gian yêu xa ấy nhiều khi thật khó khăn và đầy thử thách, nhưng bù lại nó lại khiến chúng mình tin tưởng và thấu hiểu nhau hơn bao giờ hết."
 src/components/Story/Story.jsx:29 timeline[2].title,越南的婚禮,Our wedding ceremony in Vietnam,私たちのベトナムでの結婚式,Lễ cưới của chúng mình tại Việt Nam
-src/components/Story/Story.jsx:30 timeline[2].description,在 2023 年 12 月，我們在歡笑卻又無比認真的確認了彼此是願意相伴長久的伴侶。並於 2025 年 4 月，我們在越南舉行了難以忘懷的婚禮，正式成為夫妻。,"In December 2023 we confirmed that we were meant to be lifelong partners. Then, in April 2025, we celebrated an unforgettable wedding in Vietnam, officially becoming husband and wife.","2023年12月、私たちはお互いに婚約指輪を贈り合いました。
+src/components/Story/Story.jsx:30 timeline[2].description,在 2023 年 12 月，我們在歡笑卻又無比認真的確認了彼此是願意相伴長久的伴侶。並於 2025 年 4 月，在越南舉行了難以忘懷的婚禮，正式成為夫妻。,"In December 2023 we confirmed that we were meant to be lifelong partners. Then, in April 2025, we celebrated an unforgettable wedding in Vietnam, officially becoming husband and wife.","2023年12月、私たちはお互いに婚約指輪を贈り合いました。
 そして2025年4月、ついに夫婦になりました。
 ベトナムで行われた伝統的な結婚式と、心温まる婚約式は、私たちにとって一生忘れられない思い出です。","Tháng 12/2023, chúng mình trao nhẫn cầu hôn. Tháng 4/2025, chúng mình đã chính thức trở thành vợ chồng với 1 lễ đính hôn và lễ cưới truyền thống tổ chức tại Việt Nam."
 src/components/Story/Story.jsx:38 timeline[3].title,我們是一個家庭了！,We're a family!,家族になりました！,Chúng mình là một gia đình rồi!
 src/components/Story/Story.jsx:39 timeline[3].description,我們有了屬於我們的新家。並與可愛的貓咪們一起生活。,"We moved into our own home. Now, with our lovely cats, we are a complete family.","そして今、私たちは新しい人生の章を始めました。
 二人だけの新しい家に引っ越して、それぞれが心を込めてひとつひとつの空間を作り上げています。
 今では、かわいい猫たちと一緒に暮らす、あたたかい小さな家族になりました。","Chúng mình bắt đầu 1 chương mới trong cuộc đời mình với việc chuyển về 1 ngôi nhà mới của riêng chúng mình, với từng góc nhà được chăm sóc tỉ mỉ bởi cả 2 đứa. Giờ đây chúng mình đã là 1 gia đình với bé mèo Bắp (và cả Đậu và A Meo đang ở cùng ông bà nữa!)"
-src/components/Schedule/Schedule.jsx:12 title,行程安排,Event Schedule,当日のスケジュール,Lịch trình tiệc cưới
+src/components/Schedule/Schedule.jsx:12 title,當日行程,Event Schedule,当日のスケジュール,Lịch trình tiệc cưới
 src/components/Schedule/Schedule.jsx:13 subtitle,簡單溫馨的一天,A simple flow for a joyful day,ささやかなパーティーを催したく思います,Cùng chia sẻ những khoảnh khắc ấm áp với chúng mình nhé
 src/components/Schedule/Schedule.jsx:19 events[0].title,賓客入場,Guest Arrival,受付開始,Đón khách
 src/components/Schedule/Schedule.jsx:22 events[0].location,Pearl Hall · 3F · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuanホテル,Pearl Hall · Tầng 3 · Khách sạn COZZI Blu Taoyuan
@@ -61,7 +61,7 @@ src/components/Album/Album.jsx:9 title,越南婚禮的點滴,Our Album,アルバ
 src/components/Album/Album.jsx:10 subtitle,屬於我們的美好時刻,Moments we've shared together,二人の思い出,Những khoảnh khắc chúng mình đã chia sẻ
 src/components/VideoSection/VideoSection.jsx:6 title,我們在越南的婚禮影片,Our Wedding Video in Vietnam,ベトナムでの結婚式動画,Video đám cưới chúng mình ở Việt Nam
 src/components/Footer/Footer.jsx:6 thankYou,謝謝您,Thank You,ご覧いただき誠にありがとうございます！,Xin chân thành cảm ơn
-src/components/Footer/Footer.jsx:7 message,我們期待與您同慶！,We can't wait to celebrate with you!,ご一緒にお祝いできるのを楽しみにしています！,Chúng tôi rất mong được ăn mừng cùng bạn!
+src/components/Footer/Footer.jsx:7 message,期待您的蒞臨！,We can't wait to celebrate with you!,ご一緒にお祝いできるのを楽しみにしています！,Chúng tôi rất mong được ăn mừng cùng bạn!
 src/components/Footer/Footer.jsx:8 contact,若有任何問題，請聯絡：,"For any questions, please contact:",ご不明点があればハー（あるいはショーン）までご連絡ください。,"Nếu có bất kỳ câu hỏi nào, vui lòng liên hệ:"
 src/components/Footer/Footer.jsx:9 madeWith,以愛製作,Made with love,Made with love,Made with love
 src/components/Footer/Footer.jsx:10 rights,2025 Sean & Ha. 版權所有。,2025 Sean & Ha. All rights reserved.,2025 Sean & Ha. All rights reserved.,2025 Sean & Ha. All rights reserved.
