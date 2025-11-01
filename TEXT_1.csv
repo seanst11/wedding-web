@@ -62,6 +62,15 @@ src/components/Schedule/Schedule.jsx:95 mapButton,開啟 Google 地圖,Open in G
 src/components/Album/Album.jsx:9 title,越南婚禮的點滴,Our Album,アルバム,Album
 src/components/Album/Album.jsx:10 subtitle,屬於我們的美好時刻,Moments we've shared together,二人の思い出,Những khoảnh khắc chúng mình đã chia sẻ
 src/components/VideoSection/VideoSection.jsx:6 title,我們在越南的婚禮影片,Our Wedding Video in Vietnam,ベトナムでの結婚式動画,Video đám cưới chúng mình ở Việt Nam
+src/components/Message/Message.jsx:12 title,留言給我們,Leave us a message,メッセージを送る,Gửi lời nhắn cho chúng mình
+src/components/Message/Message.jsx:13 subtitle,歡迎分享祝福或向我們提出任何問題。,We would love to hear from you! Share your blessings or ask us anything.,皆様からのメッセージをお待ちしています！お祝いの言葉や、ご質問など、お気軽にお送りください。,Chúng mình rất mong được nghe từ bạn! Hãy chia sẻ lời chúc phúc hoặc hỏi chúng mình bất cứ điều gì nhé.
+src/components/Message/Message.jsx:19 namePlaceholder,請問如何稱呼您？,How should we call you?,お名前を教えてください,Chúng mình nên gọi bạn là gì?
+src/components/Message/Message.jsx:20 messageLabel,您的留言,Your Message,メッセージ,Lời nhắn của bạn
+src/components/Message/Message.jsx:21 messagePlaceholder,分享您的想法、祝福或問題...,Share your thoughts, blessings, or questions...,お祝いの言葉や、ご質問などをお書きください...,Chia sẻ suy nghĩ, lời chúc phúc hoặc câu hỏi của bạn...
+src/components/Message/Message.jsx:26 sendButton,送出留言,Send Message,送信する,Gửi tin nhắn
+src/components/Message/Message.jsx:27 sendingButton,送出中...,Sending...,送信中...,Đang gửi...
+src/components/Message/Message.jsx:28 successMessage,感謝您！您的留言已成功送出！,Thank you! Your message has been sent successfully!,ありがとうございます！メッセージが正常に送信されました！,Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công!
+src/components/Message/Message.jsx:33 errorMessage,糟糕！發生了一些問題。請再試一次或直接聯絡我們。,Oops! Something went wrong. Please try again or contact us directly.,申し訳ございません！問題が発生しました。もう一度お試しいただくか、直接ご連絡ください。,Rất tiếc! Đã xảy ra lỗi. Vui lòng thử lại hoặc liên hệ trực tiếp với chúng mình.
 src/components/Footer/Footer.jsx:6 thankYou,謝謝您,Thank You,ご覧いただき誠にありがとうございます！,Xin chân thành cảm ơn
 src/components/Footer/Footer.jsx:7 message,期待您的蒞臨！,We can't wait to celebrate with you!,ご一緒にお祝いできるのを楽しみにしています！,Chúng tôi rất mong được ăn mừng cùng bạn!
 src/components/Footer/Footer.jsx:8 contact,若有任何問題，請聯絡：,"For any questions, please contact:",ご不明点があればハー（あるいはショーン）までご連絡ください。,"Nếu có bất kỳ câu hỏi nào, vui lòng liên hệ:"

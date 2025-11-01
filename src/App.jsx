@@ -5,6 +5,7 @@ import Story from './components/Story/Story'
 import VideoSection from './components/VideoSection/VideoSection'
 import Schedule from './components/Schedule/Schedule'
 import Album from './components/Album/Album'
+import Message from './components/Message/Message'
 import Footer from './components/Footer/Footer'
 import Couple from './components/Couple/Couple'
 import CountdownSection from './components/CountdownSection/CountdownSection'
@@ -76,6 +77,7 @@ function App() {
       <VideoSection language={language} />
       <Schedule language={language} />
       <Album language={language} />
+      <Message language={language} />
       <Footer language={language} />
     </div>
   )

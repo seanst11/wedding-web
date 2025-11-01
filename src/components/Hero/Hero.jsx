@@ -21,6 +21,13 @@ const Hero = ({ language }) => {
     rsvp: t(FILE, 'rsvp', language, 'RSVP')
   }
 
+  const scrollToMessage = () => {
+    const messageSection = document.getElementById('message')
+    if (messageSection) {
+      messageSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   const localMain = loadMainImages()
   const heroImages = localMain.length
     ? localMain
@@ -42,7 +49,9 @@ const Hero = ({ language }) => {
           <span className="divider-line"></span>
         </div>
         <p className="tagline">{content.tagline}</p>
-        <button className="rsvp-button">{content.rsvp}</button>
+        <button className="rsvp-button" onClick={scrollToMessage}>
+          {content.rsvp}
+        </button>
       </div>
       <div className="scroll-indicator">
         <div className="scroll-arrow"></div>
