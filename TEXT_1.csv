@@ -48,15 +48,17 @@ src/components/Schedule/Schedule.jsx:13 subtitle,簡單溫馨的一天,A simple 
 src/components/Schedule/Schedule.jsx:19 events[0].title,賓客入場,Guest Arrival,受付開始,Đón khách
 src/components/Schedule/Schedule.jsx:22 events[0].location,珍珠廳 · 3樓 · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuanホテル,Pearl Hall · Tầng 3 · Khách sạn COZZI Blu Taoyuan
 src/components/Schedule/Schedule.jsx:24 events[0].address,32056 桃園市中壢區德祥路101號,"COZZI Blu Hotel, Zhongli District, 101 Chunde Rd, Taoyuan 32056",,
-src/components/Schedule/Schedule.jsx:27 events[0].description,提前到場、放鬆入席,Make yourself at home.,撮影、メッセージ記入,"Chụp ảnh cùng cô dâu trước giờ làm lễ, ghi lại lời chúc trong sổ lưu bút"
-src/components/Schedule/Schedule.jsx:31 events[1].title,Wedding Ceremony,Wedding Ceremony,挙式,Lễ cưới
-src/components/Schedule/Schedule.jsx:34 events[1].address,室內婚禮，敬請入席,Indoor ceremony and rings exchange,カップルの紹介動画,"Nghi thức, video giới thiệu cô dâu chú rể"
-src/components/Schedule/Schedule.jsx:37 events[1].description,真摯的時刻,Special moment,挙式、誓い,Lễ vow
-src/components/Schedule/Schedule.jsx:41 events[2].title,宴會結束（預計）,Reception Ends,披露宴終了（予定）,Tiệc kết thúc
-src/components/Schedule/Schedule.jsx:44 events[2].address,感謝蒞臨，平安歸途,Thank you for celebrating with us!,カップルとの記念写真撮影,Chụp ảnh kỉ niệm
-src/components/Schedule/Schedule.jsx:47 events[2].description,溫馨別離，平安順心,Warm farewells and safe travels.,見送り,Tiễn khách
-src/components/Schedule/Schedule.jsx:63 ceremonyVenueLabel,婚禮會場：COZZI Blu Taoyuan,Ceremony Venue: COZZI Blu Taoyuan,会場：COZZI Blu Taoyuanホテル,Hội trường: Khách sạn COZZI Blu Taoyuan
-src/components/Schedule/Schedule.jsx:74 mapButton,開啟 Google 地圖,Open in Google Maps,Googleマップで開く,Mở trong Google Maps
+src/components/Schedule/Schedule.jsx:34 events[0].description,提前到場、放鬆入席,Make yourself at home.,撮影、メッセージ記入,"Chụp ảnh cùng cô dâu trước giờ làm lễ, ghi lại lời chúc trong sổ lưu bút"
+src/components/Schedule/Schedule.jsx:43 events[1].title,Wedding Ceremony,Wedding Ceremony,挙式,Lễ cưới
+src/components/Schedule/Schedule.jsx:47 events[1].location,珍珠廳 · 3樓 · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuanホテル,Pearl Hall · Tầng 3 · Khách sạn COZZI Blu Taoyuan
+src/components/Schedule/Schedule.jsx:53 events[1].address,室內婚禮，敬請入席,Indoor ceremony and rings exchange,カップルの紹介動画,"Nghi thức, video giới thiệu cô dâu chú rể"
+src/components/Schedule/Schedule.jsx:59 events[1].description,真摯的時刻,Special moment,挙式、誓い,Lễ vow
+src/components/Schedule/Schedule.jsx:66 events[2].title,宴會結束（預計）,Reception Ends,披露宴終了（予定）,Tiệc kết thúc
+src/components/Schedule/Schedule.jsx:70 events[2].location,珍珠廳 · 3樓 · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuanホテル,Pearl Hall · Tầng 3 · Khách sạn COZZI Blu Taoyuan
+src/components/Schedule/Schedule.jsx:76 events[2].address,感謝蒞臨，平安歸途,Thank you for celebrating with us!,カップルとの記念写真撮影,Chụp ảnh kỉ niệm
+src/components/Schedule/Schedule.jsx:82 events[2].description,溫馨別離，平安順心,Warm farewells and safe travels.,見送り,Tiễn khách
+src/components/Schedule/Schedule.jsx:90 ceremonyVenueLabel,婚禮會場：COZZI Blu Taoyuan,Ceremony Venue: COZZI Blu Taoyuan,会場：COZZI Blu Taoyuanホテル,Hội trường: Khách sạn COZZI Blu Taoyuan
+src/components/Schedule/Schedule.jsx:95 mapButton,開啟 Google 地圖,Open in Google Maps,Googleマップで開く,Mở trong Google Maps
 src/components/Album/Album.jsx:9 title,越南婚禮的點滴,Our Album,アルバム,Album
 src/components/Album/Album.jsx:10 subtitle,屬於我們的美好時刻,Moments we've shared together,二人の思い出,Những khoảnh khắc chúng mình đã chia sẻ
 src/components/VideoSection/VideoSection.jsx:6 title,我們在越南的婚禮影片,Our Wedding Video in Vietnam,ベトナムでの結婚式動画,Video đám cưới chúng mình ở Việt Nam

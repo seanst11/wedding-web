@@ -42,7 +42,12 @@ const Schedule = ({ language }) => {
       icon: '💍',
       title: t(FILE, 'events[1].title', language, 'Wedding Ceremony'),
       time: '12:00',
-      location: 'Pearl Hall · 3F · COZZI Blu Taoyuan',
+      location: t(
+        FILE,
+        'events[1].location',
+        language,
+        'Pearl Hall · 3F · COZZI Blu Taoyuan'
+      ),
       address: t(
         FILE,
         'events[1].address',
@@ -60,7 +65,12 @@ const Schedule = ({ language }) => {
       icon: '🎉',
       title: t(FILE, 'events[2].title', language, 'Reception Ends'),
       time: '14:30',
-      location: 'Pearl Hall · 3F · COZZI Blu Taoyuan',
+      location: t(
+        FILE,
+        'events[2].location',
+        language,
+        'Pearl Hall · 3F · COZZI Blu Taoyuan'
+      ),
       address: t(
         FILE,
         'events[2].address',
