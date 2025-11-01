@@ -46,7 +46,7 @@ src/components/Story/Story.jsx:39 timeline[3].description,我們有了屬於我�
 src/components/Schedule/Schedule.jsx:12 title,當日行程,Event Schedule,当日のスケジュール,Lịch trình tiệc cưới
 src/components/Schedule/Schedule.jsx:13 subtitle,簡單溫馨的一天,A simple flow for a joyful day,ささやかなパーティーを催したく思います,Cùng chia sẻ những khoảnh khắc ấm áp với chúng mình nhé
 src/components/Schedule/Schedule.jsx:19 events[0].title,賓客入場,Guest Arrival,受付開始,Đón khách
-src/components/Schedule/Schedule.jsx:22 events[0].location,Pearl Hall · 3F · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuanホテル,Pearl Hall · Tầng 3 · Khách sạn COZZI Blu Taoyuan
+src/components/Schedule/Schedule.jsx:22 events[0].location,珍珠廳 · 3樓 · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuan,Pearl Hall · 3F · COZZI Blu Taoyuanホテル,Pearl Hall · Tầng 3 · Khách sạn COZZI Blu Taoyuan
 src/components/Schedule/Schedule.jsx:24 events[0].address,32056 桃園市中壢區德祥路101號,"COZZI Blu Hotel, Zhongli District, 101 Chunde Rd, Taoyuan 32056",,
 src/components/Schedule/Schedule.jsx:27 events[0].description,提前到場、放鬆入席,Make yourself at home.,撮影、メッセージ記入,"Chụp ảnh cùng cô dâu trước giờ làm lễ, ghi lại lời chúc trong sổ lưu bút"
 src/components/Schedule/Schedule.jsx:31 events[1].title,Wedding Ceremony,Wedding Ceremony,挙式,Lễ cưới

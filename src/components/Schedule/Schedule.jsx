@@ -1,7 +1,4 @@
 import './Schedule.css'
-import imgHotel from '../../assets/others/PAL_744.jpg'
-import imgCeremony from '../../assets/others/PAL_744.jpg'
-import imgFallback from '../../assets/others/PAL_744.jpg'
 import { useCsvI18n } from '../../i18n/csvI18n'
 
 const FILE = 'src/components/Schedule/Schedule.jsx'
@@ -34,9 +31,6 @@ const Schedule = ({ language }) => {
         language,
         'COZZI Blu Hotel, Zhongli District, 101 Chunde Rd, Taoyuan 32056'
       ),
-      link:
-        'https://www.google.com/maps/place/COZZI+Blu+Taoyuan/@25.0178434,121.211204,17z',
-      image: imgHotel,
       description: t(
         FILE,
         'events[0].description',
@@ -55,7 +49,6 @@ const Schedule = ({ language }) => {
         language,
         'Indoor ceremony and rings exchange'
       ),
-      image: imgCeremony,
       description: t(
         FILE,
         'events[1].description',
@@ -74,7 +67,6 @@ const Schedule = ({ language }) => {
         language,
         'Thank you for celebrating with us!'
       ),
-      image: imgFallback,
       description: t(
         FILE,
         'events[2].description',
@@ -107,20 +99,11 @@ const Schedule = ({ language }) => {
       <div className="schedule-grid">
         {events.map((event, index) => (
           <div key={index} className="schedule-card" style={{ animationDelay: `${index * 0.1}s` }}>
-            {event.image && (
-              <img src={event.image} alt={event.title} className="schedule-image" loading="lazy" />
-            )}
             <div className="schedule-icon">{event.icon}</div>
             <h3 className="schedule-event-title">{event.title}</h3>
             <div className="schedule-time">{event.time}</div>
             <div className="schedule-location">
-              {event.link ? (
-                <a href={event.link} target="_blank" rel="noreferrer">
-                  <strong>{event.location}</strong>
-                </a>
-              ) : (
-                <strong>{event.location}</strong>
-              )}
+              <strong>{event.location}</strong>
               <br />
               {event.address}
             </div>
